@@ -236,9 +236,10 @@ public class RoutePlanner {
             
             for(int i = 0; i < rutas.size(); i++){
                 for(int j = 0; j < rutas.get(i).getRuta().size(); j++){
-                    System.out.println(rutas.get(i).getRuta().get(j).getStoreName());
+                    filewriter.write(rutas.get(i).getRuta().get(j).getStoreName()+"\n");
                 }
             }
+            filewriter.flush();
             
             
         }catch(Exception e){
